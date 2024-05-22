@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url("Hpbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    background-color: #ffffffc0;
+    border-radius: 5px;
+    width:50%;
+    padding: 1.2rem;
+}
+#faq-heading{
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.qa-container{
+    padding: 0.5rem;
+    margin: 1.2rem;
+    border-bottom: solid 1px #000;
+}
+.question{
+    font-size: 1.3rem;
+    position: relative;
+    padding: 0.5rem 0;
+}
+.answer{
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    display: none;
+    
+}
+.question::after{
+    content:"+";
+    position: absolute;
+    right: 5%;
+}
+.qa-container.active .answer{
+    display: block;
+}
+.qa-container.active .question::after{
+    content: "-";
+}
